@@ -1,0 +1,71 @@
+$--colors: (
+  "primary": (
+    "base": #7166f0,
+  ),
+  "success": (
+    "base": #00bf70,
+  ),
+  "warning": (
+    "base": #ffc40d,
+  ),
+  "danger": (
+    "base": #f23d3d,
+  ),
+  "error": (
+    "base": #f23d3d,
+  ),
+);
+
+$--height: (
+  "small": 32px,
+  "default": 34px,
+  "large": 40px,
+);
+
+
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  // do not use same name, it will override.
+  $colors: $--colors,
+  $common-component-size: $--height,
+  $menu: (
+    "base-level-padding": 20px,
+    "level-padding": 25px,
+    "item-height": 42px,
+    "sub-item-height": 42px,
+    "text-color": #45464A,
+    "hover-bg-color": #f3f4f6,
+    "hover-text-color": #030712,
+  ),
+  $table: (
+    "header-bg-color": #F8FAFC, 
+    "border-color": #EBEBEB,
+    "header-text-color": #6B748F,
+    "text-color": #344156,
+  ),
+  $table-padding: (
+    'default': 14px 0,
+  ),
+  $text-color: (
+    "regular": #45464a,
+    "secondary": #797A80,
+    "placeholder": #a9aaae
+  ),
+  $border-color: ("": #dcdff1),
+  $disabled: (
+    "bg-color": #f5f6f8,
+    "text-color": #a9aaae,
+    "border-color": #ebebeb
+  ),
+  $input: ("text-color": #46484d, "clear-hover-color": #5d79e3),
+  $card: ("border-radius": 8px),
+  $dialog: ("border-radius": 16px, "padding-primary": 20px),
+  $mask-color: ("": rgba(255, 255, 255, 0.6)),
+  $select-option: (
+    'text-color': #7C7D81,
+    'height': 38px,
+    'hover-background': #F7F9FD,
+  ),
+  $tree: (
+    'node-content-height': 30px,
+  )
+);

@@ -1,0 +1,13 @@
+{
+  // 启用保存时格式化
+  "editor.formatOnSave": true,
+
+  // 仅用 ESLint 作为格式化工具（避免和 Prettier, Vetur 等产生冲突，如果有 Prettier 需小心）
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+
+  // 保存时自动修复（比 formatOnSave 更彻底，确保 eslint --fix 生效）
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.fixAll.eslint": "always"
+  }
+}
