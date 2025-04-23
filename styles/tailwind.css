@@ -2,3 +2,12 @@
 
 @theme {
 }
+
+@font-face {
+  font-family: "PingFangSC-Regular";
+  src: url("/fonts/PingFang-SC-Regular.ttf") format("truetype");
+}
+
+:root {
+  font-family: "PingFangSC-Regular";
+}

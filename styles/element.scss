@@ -22,9 +22,10 @@ $--height: (
   "large": 40px,
 );
 
-
 @forward "element-plus/theme-chalk/src/common/var.scss" with (
-  // do not use same name, it will override.
+  $font-family: (
+    "": "PingFangSC-Regular",
+  ),
   $colors: $--colors,
   $common-component-size: $--height,
   $menu: (
@@ -32,40 +33,52 @@ $--height: (
     "level-padding": 25px,
     "item-height": 42px,
     "sub-item-height": 42px,
-    "text-color": #45464A,
+    "text-color": #45464a,
     "hover-bg-color": #f3f4f6,
     "hover-text-color": #030712,
   ),
   $table: (
-    "header-bg-color": #F8FAFC, 
-    "border-color": #EBEBEB,
-    "header-text-color": #6B748F,
+    "header-bg-color": #f8fafc,
+    "border-color": #ebebeb,
+    "header-text-color": #6b748f,
     "text-color": #344156,
   ),
   $table-padding: (
-    'default': 14px 0,
+    "default": 14px 0,
   ),
   $text-color: (
     "regular": #45464a,
-    "secondary": #797A80,
-    "placeholder": #a9aaae
+    "secondary": #797a80,
+    "placeholder": #a9aaae,
   ),
-  $border-color: ("": #dcdff1),
+  $border-color: (
+    "": #dcdff1,
+  ),
   $disabled: (
     "bg-color": #f5f6f8,
     "text-color": #a9aaae,
-    "border-color": #ebebeb
+    "border-color": #ebebeb,
   ),
-  $input: ("text-color": #46484d, "clear-hover-color": #5d79e3),
-  $card: ("border-radius": 8px),
-  $dialog: ("border-radius": 16px, "padding-primary": 20px),
-  $mask-color: ("": rgba(255, 255, 255, 0.6)),
+  $input: (
+    "text-color": #46484d,
+    "clear-hover-color": #5d79e3,
+  ),
+  $card: (
+    "border-radius": 8px,
+  ),
+  $dialog: (
+    "border-radius": 16px,
+    "padding-primary": 20px,
+  ),
+  $mask-color: (
+    "": rgba(255, 255, 255, 0.6),
+  ),
   $select-option: (
-    'text-color': #7C7D81,
-    'height': 38px,
-    'hover-background': #F7F9FD,
+    "text-color": #7c7d81,
+    "height": 38px,
+    "hover-background": #f7f9fd,
   ),
   $tree: (
-    'node-content-height': 30px,
+    "node-content-height": 30px,
   )
 );

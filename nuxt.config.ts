@@ -1,14 +1,18 @@
 import tailwindcss from "@tailwindcss/vite";
-
-const { NUXT_API_PREFIX, NUXT_API_URL, NUXT_API_REDIRECT } = process.env;
+import { writeFileSync } from "fs";
+const { NUXT_API_PREFIX, NUXT_API_URL, NUXT_API_REDIRECT, NUXT_LOGIN_URL } =
+  process.env;
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   icon: {
     mode: "css",
     cssLayer: "base",
   },
+
   ssr: false,
+
   modules: [
     "@nuxt/icon",
     "@nuxt/image",
@@ -23,14 +27,18 @@ export default defineNuxtConfig({
     importStyle: "scss",
     themes: ["dark"],
   },
+
   css: ["~/styles/tailwind.css"],
+
   runtimeConfig: {
     public: {
       apiPrefix: NUXT_API_PREFIX,
       apiUrl: NUXT_API_URL,
       apiRedirectUrl: NUXT_API_REDIRECT,
+      loginUrl: NUXT_LOGIN_URL,
     },
   },
+
   vite: {
     plugins: [tailwindcss()],
     css: {
@@ -55,5 +63,9 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: "2025-04-22",
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
+
+  compatibilityDate: "2025-04-23",
 });
